@@ -1,0 +1,16 @@
+﻿@model ShoppingList.Models.ShoppingListActive;
+@{
+    ViewData["Title"] = "Buylist";
+}
+
+    <h1 class="h5 my-3">Shopping list</h1>
+    <div class="listMenu">
+        @foreach (var item in Model.BuyListData)
+        {
+                <input type="checkbox" class="deactivateMe" id='@item.Id'>
+                <label for='@item.Id'>@item.Amount @item.Unit @item.Name</label>
+        }
+    </div>
+    <span class="lead font-weight-bold">+ <input type="text" ID="addItem" style="border-width:0px;"><label for='addMe'></label></input></span>
+    <p style="cursor:pointer" class="addListElement mt-3"><span class="font-weight-bold"></span> <span class="lead">Add from shortlist</span></p>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@

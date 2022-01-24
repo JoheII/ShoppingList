@@ -1,0 +1,15 @@
+﻿@model ShoppingList.Models.ShoppingListActive;
+@{
+    ViewData["Title"] = "Shoppinglist";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="row">
+            @foreach (var item in Model.BuyListData)
+        {
+            <p>@item.Amount @item.Unit @item.Name</p>
+        }
+    </div>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+</div>
